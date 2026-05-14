@@ -4,7 +4,9 @@
   "outputDirectory": "public/build",
   "functions": {
     "api/index.php": {
-      "runtime": "vercel-php@0.7.3"
+      "runtime": "vercel-php@0.7.3",
+      "memory": 1024,
+      "maxDuration": 30
     }
   },
   "routes": [
@@ -16,5 +18,10 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ]
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "true",
+    "APP_URL": "https://toko-in-jl5vm0rkq-damars-projects-b5417cb6.vercel.app"
+  }
 }
