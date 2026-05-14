@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan key:generate --force && php artisan migrate --force && npm run build",
   "outputDirectory": "public/build",
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.7.3",
-      "memory": 1024,
       "maxDuration": 30
     }
   },
@@ -22,6 +21,8 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
-    "APP_URL": "https://toko-in-jl5vm0rkq-damars-projects-b5417cb6.vercel.app"
+    "APP_URL": "https://toko-in-oywnwm9tj-damars-projects-b5417cb6.vercel.app",
+    "DB_CONNECTION": "sqlite",
+    "DB_DATABASE": "/tmp/database.sqlite"
   }
 }
