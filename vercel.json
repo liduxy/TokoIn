@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan key:generate --force && php artisan migrate --force && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "public/build",
   "functions": {
     "api/index.php": {
