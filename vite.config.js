@@ -7,7 +7,13 @@ export default defineConfig({
         laravel({
             input: 'resources/js/app.tsx',
             refresh: true,
+            // Tambahkan ini
+            publicDirectory: 'public',
+            buildDirectory: 'build',
         }),
         react(),
     ],
+    build: {
+        outDir: 'public/build',   // pastikan ini
+    }
 });
